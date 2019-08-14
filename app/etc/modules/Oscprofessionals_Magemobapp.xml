@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * @category    Oscprofessionals
+ * @package    Oscprofessionals_Magemobapp
+ * @author     Oscprofessionals Team <oscpteam@oscprofessionals.com>
+ */
+-->
+<config>
+  <modules>
+    <Oscprofessionals_Magemobapp>
+      <active>true</active>
+      <codePool>community</codePool>
+      <version>2.0.0</version>
+    </Oscprofessionals_Magemobapp>
+  </modules>
+</config>

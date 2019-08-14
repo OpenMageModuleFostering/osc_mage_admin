@@ -1,0 +1,256 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * @category    Oscprofessionals
+ * @package    Oscprofessionals_Magemobapp
+ * @author     Oscprofessionals Team <oscpteam@oscprofessionals.com>
+ */
+-->
+<config>
+    <tabs>
+        <magemobapp translate="label" module="magemobapp">
+            <label>Oscprofessionals</label>
+            <sort_order>1000</sort_order>
+        </magemobapp>
+    </tabs>
+    <sections>
+        <magemobapp translate="label" module="magemobapp">
+            <label>Mage Mob App</label>
+            <tab>magemobapp</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <!-- < BOF of enabled flag> -->
+            <groups>
+                <settings translate="label">
+                    <label>Mage Mob App setting</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <reporting_days translate="label">
+                            <label>Reporting Days</label>
+                            <validate>required-entry validate-digits-range digits-range-7-30"</validate>
+                            <comment>Enter Reporting Days(min 7 and max 30 days)</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </reporting_days>
+                        <stock_critical_level translate="label">
+                            <label>Stock Critical Level</label>
+                            <comment>Stock Critical level</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </stock_critical_level>
+                        <notification_enabled translate="label">
+                            <label>Notification Status Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </notification_enabled>
+                        <update_frequency translate="label">
+                            <label>Update Frequency</label>
+                            <comment>value should be in minute. for Example:5 min</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <notification_enabled>1</notification_enabled>
+                            </depends>	
+                        </update_frequency>
+                    </fields>
+                </settings>
+                <sitehealth translate="label" module="magemobapp">
+                    <label>Site Health Monitor</label>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <sort_order>20</sort_order>
+                    <fields>
+                        <website_enabled translate="label">
+                            <label>Webpage Status Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </website_enabled>
+                        <server_enabled translate="label">
+                            <label>Serverload Status Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </server_enabled>
+                        <server_load translate="label">
+                            <label>Server load Average</label>
+                            <comment>limit for load average</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <server_enabled>1</server_enabled>
+                            </depends>	
+                        </server_load>
+                        <memory_usage translate="label">
+                            <label>Memory Usage</label>
+                            <comment>limit for Memory Usage</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <server_enabled>1</server_enabled>
+                            </depends>	
+                        </memory_usage>
+                        <cpu_usage translate="label">
+                            <label>CPU Usage</label>
+                            <comment>limit for CPU Usage</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <server_enabled>1</server_enabled>
+                            </depends>	
+                        </cpu_usage>
+                        <cronschedule_enabled translate="label">
+                            <label>CronSchedule Status Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cronschedule_enabled>
+                        <index_enabled translate="label">
+                            <label>Indexing Status Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </index_enabled>
+                        <logtable_enabled translate="label">
+                            <label>Log Table Size Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </logtable_enabled>
+                        <log_table_size translate="label">
+                            <label>Log Table Size</label>
+                            <comment>limit for log table size</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <logtable_enabled>1</logtable_enabled>
+                            </depends>
+                        </log_table_size>
+                    </fields>
+                </sitehealth>
+                <dashboard translate="label" module="magemobapp">
+                    <label>Dashboard</label>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <sort_order>30</sort_order>
+                    <fields>
+                        <neworder_enabled translate="label">
+                            <label>New Order Status Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </neworder_enabled>
+                        <allorder_enabled translate="label">
+                            <label>All Order Status Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </allorder_enabled>
+                        <allcustomers_enabled translate="label">
+                            <label>All Customers Status Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </allcustomers_enabled>
+                        <stockalert_enabled translate="label">
+                            <label>Stock Alert Status Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </stockalert_enabled>
+                        <todayssales_enabled translate="label">
+                            <label>Todays Sales Status Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </todayssales_enabled>
+                        <online_enabled translate="label">
+                            <label>Online Customer Status Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </online_enabled>
+                        <abandonedcart_enabled translate="label">
+                            <label>Abandoned Cart Status Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </abandonedcart_enabled>
+                    </fields>
+                </dashboard>
+                <!-- < EOF of enabled flag> -->
+            </groups>
+        </magemobapp>
+    </sections>
+</config>

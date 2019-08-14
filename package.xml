@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+    <name>Osc_Mage_Admin</name>
+    <version>2.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>E-store dashboard on Android, iOS mobile with Sales/order/customer/stock-alert report, site-health...</summary>
+    <description>Monitor your e-store on mobile anytime, anywhere!&#xD;
+Android &amp; iOS App to view dashboard including Order report, Customer report, Sales report, Stock Alert report, Abandoned orders, Site health and many more.&#xD;
+Access real-time analytic of your multi-store. </description>
+    <notes>Release with latest version</notes>
+    <authors><author><name>Satish Mantri</name><user>oscprof</user><email>satish@oscprofessionals.com</email></author></authors>
+    <date>2015-10-21</date>
+    <time>12:49:48</time>
+    <contents><target name="magecommunity"><dir name="Oscprofessionals"><dir name="Magemobapp"><dir name="Block"><dir name="Order"><file name="Totals.php" hash="d67bf0a949f2f543ccc10fff0a52fe7b"/></dir><file name="Osc.php" hash="d56e631c46d3878670922eafb9c4339c"/></dir><dir name="Helper"><file name="Data.php" hash="e2dc00a341a7000aba51990fb9e8259c"/></dir><dir name="Model"><file name="Customers.php" hash="0bb495f2143239c6f7a1af346eab6e50"/><file name="Dashboard.php" hash="a21fa48873cf3aff5f4d0f1ecf341995"/><file name="Login.php" hash="42c1c0856a26435fb0df48663848d328"/><file name="Logoff.php" hash="3c67d878906fac004434d49672a0d5c8"/><file name="Notification.php" hash="014b0bff2a499cbbb69c040c27174185"/><file name="Orders.php" hash="82782b2be3e8d0d95269407596644118"/><file name="Osc.php" hash="7a663e16bc2092aa6ca372480556c7cc"/><file name="Sitehealth.php" hash="070a4b8a7b353fa5552b20dd8481ca3b"/><file name="Stock.php" hash="c5325cf49327e0df4655612653de1028"/><file name="Storeinfo.php" hash="f14ae6b708ba0de0683834fe27a63e7f"/></dir><dir name="controllers"><file name="IndexController.php" hash="0cb9c4c434484266cecb238228c47938"/></dir><dir name="etc"><file name="adminhtml.xml" hash="3565c974e3b41d1ac2cafc60bc544389"/><file name="config.xml" hash="9331a90f90ad16bbf970b74bc84aa52d"/><file name="system.xml" hash="2d6c6bc10f626b310d0214e713265398"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Oscprofessionals_Magemobapp.xml" hash="60c3463c0b761390bf67fbb5b4b7a513"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

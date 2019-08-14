@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ *
+ * @category    Oscprofessionals
+ * @package    Oscprofessionals_Magemobapp
+ * @author     Oscprofessionals Team <oscpteam@oscprofessionals.com>
+ */
+-->
+<config>
+    <modules>
+        <Oscprofessionals_Magemobapp>
+            <version>2.0.0</version>
+        </Oscprofessionals_Magemobapp>
+    </modules>
+    <frontend>
+        <routers>
+            <magemobapp>
+                <use>standard</use>
+                <args>
+                    <module>Oscprofessionals_Magemobapp</module>
+                    <frontName>magemobapp</frontName>
+                </args>
+            </magemobapp>
+        </routers>
+    </frontend>
+    <global>
+        <models>
+            <magemobapp>
+                <class>Oscprofessionals_Magemobapp_Model</class>
+                <resourceModel>magemobapp_mysql4</resourceModel>
+            </magemobapp>
+        </models>
+        <blocks>
+            <magemobapp>
+                <class>Oscprofessionals_Magemobapp_Block</class>
+            </magemobapp>
+        </blocks>
+        <helpers>
+            <magemobapp>
+                <class>Oscprofessionals_Magemobapp_Helper</class>
+            </magemobapp>
+        </helpers>
+    </global>
+    <default>
+        <magemobapp>
+            <settings>
+                <reporting_days>7</reporting_days>
+                <stock_critical_level>20</stock_critical_level>
+                <notification_enabled>1</notification_enabled>
+                <update_frequency>5</update_frequency>
+            </settings>
+            <sitehealth>
+                <website_enabled>1</website_enabled>
+                <server_enabled>1</server_enabled>
+                <server_load>15</server_load>
+                <memory_usage>80%</memory_usage>
+                <cpu_usage>60%</cpu_usage>
+                <cronschedule_enabled>1</cronschedule_enabled>
+                <index_enabled>1</index_enabled>
+                <logtable_enabled>1</logtable_enabled>
+                <log_table_size>5000</log_table_size>
+            </sitehealth>
+            <dashboard>
+                <neworder_enabled>1</neworder_enabled>
+                <allorder_enabled>1</allorder_enabled>
+                <allcustomers_enabled>1</allcustomers_enabled>
+                <stockalert_enabled>1</stockalert_enabled>
+                <todayssales_enabled>1</todayssales_enabled>
+                <online_enabled>1</online_enabled>
+                <abandonedcart_enabled>1</abandonedcart_enabled>
+            </dashboard>
+        </magemobapp>
+    </default>
+</config>

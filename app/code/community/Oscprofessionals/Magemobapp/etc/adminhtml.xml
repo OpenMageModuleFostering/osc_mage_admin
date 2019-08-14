@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * @category    Oscprofessionals
+ * @package    Oscprofessionals_Magemobapp
+ * @author     Oscprofessionals Team <oscpteam@oscprofessionals.com>
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <magemobapp translate="title" module="magemobapp">
+                                        <title>Mage Mob App</title>
+                                    </magemobapp>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
