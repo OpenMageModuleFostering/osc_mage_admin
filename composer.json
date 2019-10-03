@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Osc_Mage_Admin",
+    "name": "OpenMageModuleFostering\/Osc_Mage_Admin",
     "type": "magento-module",
     "license": "Open-Software-License-(OSL)",
     "homepage": "",
-    "description": "E-store dashboard on Android, iOS mobile with Sales/order/customer/stock-alert report, site-health...",
+    "description": "E-store dashboard on Android, iOS mobile with Sales\/order\/customer\/stock-alert report, site-health...",
     "authors": [
-    {
-        "name": "Satish Mantri",
-        "email": "satish@oscprofessionals.com"
-    }
-],
+        {
+            "name": "Satish Mantri",
+            "email": "satish@oscprofessionals.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
