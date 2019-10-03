@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Osc_Mage_Admin",
+    "name": "openmage-module-fostering\/osc_mage_admin",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL)",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "E-store dashboard on Android, iOS mobile with Sales\/order\/customer\/stock-alert report, site-health...",
     "authors": [
